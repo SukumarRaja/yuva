@@ -1,6 +1,6 @@
 # prime_web
 
-A new Flutter project.
+The applicaton used to convert web to app
 
 ## Getting Started
 
