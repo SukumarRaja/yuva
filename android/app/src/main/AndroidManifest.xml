@@ -35,7 +35,6 @@
       <uses-permission android:name="android.permission.VIDEO_CAPTURE" />
       <uses-permission android:name="android.permission.AUDIO_CAPTURE" />
       <uses-permission android:name="android.permission.BLUETOOTH" />
-      <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
       <!-- start: remove below  permissions if location permission not require -->
       <!--end-location permisssion-->
    <application
