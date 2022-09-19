@@ -79,7 +79,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\USER\Downloads\Skolars favicon.png" />
+                                                <entry key="imagePath" value="C:\Users\USER\Downloads\Logo Main.png" />
                                                 <entry key="scalingPercent" value="49" />
                                               </map>
                                             </option>
@@ -113,7 +113,7 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="ffffff" />
+                                      <entry key="backgroundColor" value="f8f7f7" />
                                     </map>
                                   </option>
                                 </PersistentState>

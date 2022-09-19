@@ -1,4 +1,4 @@
-package com.skolarrs
+package app.workstation360.org
 
 import io.flutter.embedding.android.FlutterActivity
 

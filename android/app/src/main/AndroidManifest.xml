@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
  xmlns:tools="http://schemas.android.com/tools"
-    package="com.skolarrs">
+    package="app.workstation360.org">
     <queries>
       <!-- If your app opens https URLs -->
       <intent>
@@ -37,12 +37,9 @@
       <uses-permission android:name="android.permission.BLUETOOTH" />
       <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
       <!-- start: remove below  permissions if location permission not require -->
-      <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-      <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-      <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
       <!--end-location permisssion-->
    <application
-        android:label="SKOLARRS"
+        android:label="WorkStation 360"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher_round"
         android.usesCleartextTraffic="true"

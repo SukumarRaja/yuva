@@ -1,16 +1,16 @@
-const appName = 'Skolarrs';
+const appName = 'WorkStation 360';
 
-const String appbartitle = 'Skloarrs';
-const String andoidPackageName = 'com.skolarrs';
+const String appbartitle = 'WorkStation 360';
+const String andoidPackageName = 'app.workstation360.org';
 
 //change this url to set your URL in app
 // String webinitialUrl = 'https://www.codecanyon.net';
-String webinitialUrl = 'https://skolarrs.workstation360.org/admin/authentication';
-const String firstTabUrl = 'https://skolarrs.workstation360.org/admin/leads';
+String webinitialUrl = 'https://app.workstation360.org/admin/authentication';
+const String firstTabUrl = 'https://app.workstation360.org/admin/leads';
 
 //keep local content of pages of setting screen
-const String callLogsUrl = 'https://skolarrs.workstation360.org/admin/call_logs';
-const String webSiteUrl = 'https://skolarrssolutions.com/';
+const String callLogsUrl = 'https://app.workstation360.org/admin/call_logs';
+const String webSiteUrl = '';
 const String termsPageURL = '';
 
 //Change App id of android and IOS app

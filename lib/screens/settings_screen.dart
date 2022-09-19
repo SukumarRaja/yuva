@@ -7,7 +7,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
 import 'package:prime_web/screens/webview_screen.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:store_redirect/store_redirect.dart';
 import '../helpers/Strings.dart';
 import '../helpers/Icons.dart';
 import '../helpers/Constant.dart';
