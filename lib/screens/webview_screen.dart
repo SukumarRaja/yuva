@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
-import 'package:prime_web/helpers/Strings.dart';
+import 'package:work_station/helpers/Strings.dart';
 import '../widgets/no_internet.dart';
 import '../widgets/no_internet_widget.dart';
 import '../widgets/load_web_view.dart';

@@ -1,17 +1,13 @@
 // ignore_for_file: prefer_const_constructors
-
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:prime_web/screens/home_screen.dart';
-import 'package:prime_web/screens/settings_screen.dart';
+import 'package:work_station/screens/home_screen.dart';
+import 'package:work_station/screens/settings_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import '../provider/navigationBarProvider.dart';
-import '../screens/splash_screen.dart';
 import '../helpers/Constant.dart';
 import '../screens/main_screen.dart';
 import '../widgets/admob_service.dart';
@@ -127,6 +123,7 @@ class _MyAppState extends State<MyApp> {
               case 'settings':
                 return MaterialPageRoute(builder: (_) => SettingsScreen());
             }
+            return null;
           },
         );
       }),

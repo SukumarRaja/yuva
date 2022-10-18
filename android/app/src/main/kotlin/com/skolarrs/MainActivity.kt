@@ -1,4 +1,4 @@
-package app.workstation360.org
+package com.limitless.workstation
 
 import io.flutter.embedding.android.FlutterActivity
 

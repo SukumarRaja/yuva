@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
-import 'package:prime_web/screens/webview_screen.dart';
+import 'package:work_station/screens/webview_screen.dart';
 import 'package:share_plus/share_plus.dart';
 import '../helpers/Strings.dart';
 import '../helpers/Icons.dart';

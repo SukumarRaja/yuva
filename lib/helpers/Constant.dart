@@ -1,7 +1,7 @@
 const appName = 'WorkStation 360';
 
 const String appbartitle = 'WorkStation 360';
-const String andoidPackageName = 'app.workstation360.org';
+const String andoidPackageName = 'com.limitless.workstation';
 
 //change this url to set your URL in app
 // String webinitialUrl = 'https://www.codecanyon.net';
