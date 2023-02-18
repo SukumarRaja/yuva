@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
-import 'package:work_station/screens/webview_screen.dart';
+import 'package:limitless.eelon/screens/webview_screen.dart';
 import 'package:share_plus/share_plus.dart';
 import '../helpers/Strings.dart';
 import '../helpers/Icons.dart';
@@ -58,27 +58,27 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   title: _buildTitle(CustomStrings.darkMode),
                   trailing: ChangeThemeButtonWidget(),
                 ),
-                ListTile(
-                    leading:
-                    _buildIcon(Theme.of(context).colorScheme.aboutUsIcon),
-                    title: _buildTitle(CustomStrings.callLogs),
-                    trailing: Icon(
-                      Icons.arrow_forward_ios_rounded,
-                      color: Theme.of(context).iconTheme.color,
-                    ),
-                    onTap: () => _onPressed(WebviewScreen(CustomStrings.callLogs,
-                        CustomStrings.callLogsContent, callLogsUrl))),
+                // ListTile(
+                //     leading:
+                //     _buildIcon(Theme.of(context).colorScheme.aboutUsIcon),
+                //     title: _buildTitle(CustomStrings.callLogs),
+                //     trailing: Icon(
+                //       Icons.arrow_forward_ios_rounded,
+                //       color: Theme.of(context).iconTheme.color,
+                //     ),
+                //     onTap: () => _onPressed(WebviewScreen(CustomStrings.callLogs,
+                //         CustomStrings.callLogsContent, callLogsUrl))),
 
-                ListTile(
-                    leading:
-                    _buildIcon(Theme.of(context).colorScheme.privacyIcon),
-                    title: _buildTitle(CustomStrings.webSite),
-                    trailing: Icon(
-                      Icons.arrow_forward_ios_rounded,
-                      color: Theme.of(context).iconTheme.color,
-                    ),
-                    onTap: () => _onPressed(WebviewScreen(CustomStrings.webSite,
-                        CustomStrings.callLogsContent, webSiteUrl))),
+                // ListTile(
+                //     leading:
+                //     _buildIcon(Theme.of(context).colorScheme.privacyIcon),
+                //     title: _buildTitle(CustomStrings.webSite),
+                //     trailing: Icon(
+                //       Icons.arrow_forward_ios_rounded,
+                //       color: Theme.of(context).iconTheme.color,
+                //     ),
+                //     onTap: () => _onPressed(WebviewScreen(CustomStrings.webSite,
+                //         CustomStrings.callLogsContent, webSiteUrl))),
                 // ListTile(
                 //     leading:
                 //     _buildIcon(Theme.of(context).colorScheme.privacyIcon),

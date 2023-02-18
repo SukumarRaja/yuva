@@ -1,4 +1,4 @@
-package com.limitless.workstation
+package limitless.eelon
 
 import io.flutter.embedding.android.FlutterActivity
 

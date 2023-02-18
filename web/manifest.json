@@ -1,6 +1,6 @@
 {
-    "name": "work_station",
-    "short_name": "work_station",
+    "name": "limitless.eelon",
+    "short_name": "limitless.eelon",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
  xmlns:tools="http://schemas.android.com/tools"
-    package="com.limitless.workstation">
+    package="limitless.eelon">
     <queries>
       <!-- If your app opens https URLs -->
       <intent>
@@ -36,7 +36,7 @@
       <!-- start: remove below  permissions if location permission not require -->
       <!--end-location permisssion-->
    <application
-        android:label="WorkStation 360"
+        android:label="Eelon Student"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher_round"
         android.usesCleartextTraffic="true"

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/PrimeWeb_oneSignal.iml" filepath="$PROJECT_DIR$/.idea/PrimeWeb_oneSignal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/eelon.iml" filepath="$PROJECT_DIR$/.idea/eelon.iml" />
     </modules>
   </component>
 </project>

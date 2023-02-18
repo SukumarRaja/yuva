@@ -8,6 +8,17 @@
             <PersistentState>
               <option name="children">
                 <map>
+                  <entry key="confirmationStep">
+                    <value>
+                      <PersistentState>
+                        <option name="values">
+                          <map>
+                            <entry key="resourceDirectory" value="release" />
+                          </map>
+                        </option>
+                      </PersistentState>
+                    </value>
+                  </entry>
                   <entry key="imageAssetPanel">
                     <value>
                       <PersistentState>
@@ -79,8 +90,8 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\USER\Downloads\Logo Main.png" />
-                                                <entry key="scalingPercent" value="49" />
+                                                <entry key="imagePath" value="C:\Users\USER\Downloads\Logo copy.png" />
+                                                <entry key="scalingPercent" value="50" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -113,7 +124,7 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="f8f7f7" />
+                                      <entry key="backgroundColor" value="ffffff" />
                                     </map>
                                   </option>
                                 </PersistentState>

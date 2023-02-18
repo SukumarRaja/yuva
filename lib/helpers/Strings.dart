@@ -1,7 +1,7 @@
 class CustomStrings {
   static const String home = 'Home';
 
-  static const String leads = 'Leads';
+  static const String leads = 'Profile';
 
   static const String settings = 'Settings';
 

@@ -1,15 +1,15 @@
-const appName = 'WorkStation 360';
+const appName = 'Eelon';
 
-const String appbartitle = 'WorkStation 360';
-const String andoidPackageName = 'com.limitless.workstation';
+const String appbartitle = 'Eelon';
+const String andoidPackageName = 'limitless.eelon';
 
 //change this url to set your URL in app
 // String webinitialUrl = 'https://www.codecanyon.net';
-String webinitialUrl = 'https://app.workstation360.org/admin/authentication';
-const String firstTabUrl = 'https://app.workstation360.org/admin/leads';
+String webinitialUrl = 'https://app.eelonterritory.co.in/';
+const String firstTabUrl = 'https://app.eelonterritory.co.in/profile.php';
 
 //keep local content of pages of setting screen
-const String callLogsUrl = 'https://app.workstation360.org/admin/call_logs';
+const String callLogsUrl = 'https://app.eelonterritory.co.in/assignments.php';
 const String webSiteUrl = '';
 const String termsPageURL = '';
 
