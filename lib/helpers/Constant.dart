@@ -5,11 +5,11 @@ const String andoidPackageName = 'limitless.eelon';
 
 //change this url to set your URL in app
 // String webinitialUrl = 'https://www.codecanyon.net';
-String webinitialUrl = 'https://app.eelonterritory.co.in/';
-const String firstTabUrl = 'https://app.eelonterritory.co.in/profile.php';
+String webinitialUrl = 'https://app.eelonterritory.co.in/webservice/dashboard.php';
+const String firstTabUrl = 'https://app.eelonterritory.co.in/webservice/profile.php';
 
 //keep local content of pages of setting screen
-const String callLogsUrl = 'https://app.eelonterritory.co.in/assignments.php';
+const String callLogsUrl = 'https://app.eelonterritory.co.in/webservice/subjects.php?type=iLearn';
 const String webSiteUrl = '';
 const String termsPageURL = '';
 
@@ -52,7 +52,7 @@ const iosBannerAdId = 'ca-app-pub-3940256099942544/2934735716';
 const String messageIcon = '@mipmap/ic_launcher_round';
 
 //copy your  one-signal android app id
-const oneSignalAndroidAppId = '17fa2879-1c54-4bbd-9b53-3919fdfe6b12';
+const oneSignalAndroidAppId = '3bd63fe4-c0b6-4103-9a82-f9fa9ef48979';
 
 //copy your  one-signal ios app id
 const oneSignalIOSAppId = '';

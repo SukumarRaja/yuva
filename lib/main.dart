@@ -1,8 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 import 'dart:async';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:get/get.dart';
 import 'package:limitless.eelon/screens/home_screen.dart';
 import 'package:limitless.eelon/screens/settings_screen.dart';
 import 'package:provider/provider.dart';
@@ -12,38 +14,31 @@ import '../helpers/Constant.dart';
 import '../screens/main_screen.dart';
 import '../widgets/admob_service.dart';
 import '../provider/theme_provider.dart';
+import 'app/services/notifications.dart';
+import 'app/ui/screens/on_board.dart';
 import 'screens/main_screen_bottom_bar.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
 
-AndroidNotificationChannel channel = const AndroidNotificationChannel(
-    'msg_channel', // id
-    'High Notifications', // title
-    description:
-        'This channel is used for important notifications.', // description
-    importance: Importance.high,
-    playSound: true);
+@pragma('vm:entry-point')
+Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  await Firebase.initializeApp();
+  print('Handling a background message ${message.messageId}');
+}
 
-final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
-    FlutterLocalNotificationsPlugin();
 Future main() async {
-  WidgetsFlutterBinding
-      .ensureInitialized(); //when we have to communicate to flutter framework before initializing app
-
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+  initMessaging();
+  var token = await FirebaseMessaging.instance.getToken();
+  SharedPreferences pref = await SharedPreferences.getInstance();
+  pref.setString("fcm", "$token");
+  print("fcm token is $token");
   if (showInterstitialAds) {
     AdMobService.initialize();
   }
 
-  flutterLocalNotificationsPlugin
-      .resolvePlatformSpecificImplementation<
-          IOSFlutterLocalNotificationsPlugin>()
-      ?.requestPermissions(
-        alert: true,
-        badge: true,
-        sound: true,
-      );
-
-  bool isNavVisible = true;
   int counter = 0;
   SharedPreferences.getInstance().then((prefs) {
     prefs.setInt('counter', counter);
@@ -75,7 +70,7 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     if (showSplashScreen) {
-      startTimer();
+      // startTimer();
     }
   }
 
@@ -94,11 +89,9 @@ class _MyAppState extends State<MyApp> {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
       /* start--commnet  below 2 lines to enable landscape mode */
-      DeviceOrientation
-          .landscapeLeft, 
-      DeviceOrientation
-          .landscapeRight 
-         /*end */
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight
+      /*end */
     ]);
     return MultiProvider(
       providers: [
@@ -106,16 +99,15 @@ class _MyAppState extends State<MyApp> {
             create: (_) => NavigationBarProvider())
       ],
       child: Consumer<ThemeProvider>(builder: (context, value, child) {
-        return MaterialApp(
+        return GetMaterialApp(
           title: appName,
           debugShowCheckedModeBanner: false,
           themeMode: value.getTheme(),
           theme: AppThemes.lightTheme,
           darkTheme: AppThemes.darkTheme,
           navigatorKey: navigatorKey,
-          home:showBottomNavigationBar
-                  ? MainScreen()
-                  : MyHomePage(),
+          // home: showBottomNavigationBar ? MainScreen() : MyHomePage(),
+          home: OnBoarding(),
           onGenerateRoute: (RouteSettings settings) {
             switch (settings.name) {
               case 'home':
