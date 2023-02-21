@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import '../../controller/auth.dart';
 import '../../themes/colors.dart';
 
@@ -75,7 +76,7 @@ class _OnBoardingScreenState extends State<OnBoarding> {
                 ),
               ),
               SizedBox(
-                height: media.height * 0.7,
+                height: media.height / 1.5,
                 child: PageView(
                   physics: const ClampingScrollPhysics(),
                   controller: pageController,
@@ -122,10 +123,11 @@ class _OnBoardingScreenState extends State<OnBoarding> {
                             );
                           },
                           child: Container(
-                            height: media.width * 0.10,
-                            width: media.width * 0.25,
-                            padding: const EdgeInsets.all(10.0),
-                            margin: const EdgeInsets.all(10.0),
+                            // height: media.width * 0.10,
+                            // width: media.width * 0.25,
+                            padding: const EdgeInsets.only(
+                                left: 20.0, right: 20.0, bottom: 8.0, top: 8.0),
+                            margin: const EdgeInsets.all(15.0),
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(5.0),
                                 color: AppColors.primary),
@@ -204,6 +206,7 @@ class _OnBoardingScreenState extends State<OnBoarding> {
   SvgPicture buildSvgPicture({required imgSrc}) {
     return SvgPicture.asset(
       "assets/svgs/$imgSrc.svg",
+      height: Get.width / 1.2,
     );
   }
 }
