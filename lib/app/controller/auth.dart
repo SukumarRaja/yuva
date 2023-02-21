@@ -5,6 +5,7 @@ import 'package:limitless.eelon/app/ui/screens/login.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../helpers/Constant.dart';
 import '../../screens/main_screen_bottom_bar.dart';
 import '../data/repository/auth.dart';
 import '../ui/widgets/common_alert.dart';
@@ -62,6 +63,7 @@ class AuthController extends GetxController {
   checkOnBoarding() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     var token = preferences.getString('on_boarding');
+    print("onboard data is $token");
     if (token == null) {
       return true;
     } else {
@@ -81,6 +83,7 @@ class AuthController extends GetxController {
           Map storedData = {"studentId": "${res['student_id']}"};
           storeLocalDevice(body: storedData);
           FcmController.to.updateFcm();
+          getId();
           Get.off(() => MainScreen());
           commonSnackBar(title: "Success", msg: "Login Successfully");
           // loginFieldsEmpty();

@@ -5,6 +5,9 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:limitless.eelon/app/controller/auth.dart';
+import 'package:limitless.eelon/app/ui/screens/initial.dart';
+import 'package:limitless.eelon/app/ui/screens/login.dart';
 import 'package:limitless.eelon/screens/home_screen.dart';
 import 'package:limitless.eelon/screens/settings_screen.dart';
 import 'package:provider/provider.dart';
@@ -69,6 +72,11 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
+    // checkOnboarding();
+    checkId();
+    if (id != null || id != "") {
+      getId();
+    }
     if (showSplashScreen) {
       // startTimer();
     }
@@ -81,6 +89,38 @@ class _MyAppState extends State<MyApp> {
         () => navigatorKey.currentState!.pushReplacement(MaterialPageRoute(
             builder: (_) =>
                 showBottomNavigationBar ? MainScreen() : MyHomePage())));
+  }
+
+  dynamic login;
+  dynamic onBoarding;
+  dynamic isLogin;
+
+  checkOnboarding() {
+    login = AuthController.to.loginCheck();
+    onBoarding = AuthController.to.checkOnBoarding();
+    if (onBoarding == true) {
+      setState(() {
+        isLogin = 'onBoarding';
+      });
+    } else if (login == true) {
+      setState(() {
+        isLogin = "isLogin";
+      });
+    } else {
+      debugPrint("logged in $isLogin");
+    }
+
+    if (login == true) {
+      setState(() {
+        isLogin = "isLogin";
+      });
+    }
+  }
+
+  checkId() async {
+    SharedPreferences pref = await SharedPreferences.getInstance();
+    id = pref.getString('studentId');
+    return id;
   }
 
   @override
@@ -107,7 +147,7 @@ class _MyAppState extends State<MyApp> {
           darkTheme: AppThemes.darkTheme,
           navigatorKey: navigatorKey,
           // home: showBottomNavigationBar ? MainScreen() : MyHomePage(),
-          home: OnBoarding(),
+          home: Initial(),
           onGenerateRoute: (RouteSettings settings) {
             switch (settings.name) {
               case 'home':

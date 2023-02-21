@@ -1,15 +1,27 @@
+import 'package:shared_preferences/shared_preferences.dart';
+
 const appName = 'Eelon';
 
 const String appbartitle = 'Eelon';
 const String andoidPackageName = 'limitless.eelon';
+String? id = "";
+
+getId() async {
+  SharedPreferences pref = await SharedPreferences.getInstance();
+  id = pref.getString('studentId');
+  print("id is $id");
+}
 
 //change this url to set your URL in app
 // String webinitialUrl = 'https://www.codecanyon.net';
-String webinitialUrl = 'https://app.eelonterritory.co.in/webservice/dashboard.php';
-const String firstTabUrl = 'https://app.eelonterritory.co.in/webservice/profile.php';
+String webinitialUrl =
+    'https://app.eelonterritory.co.in/webservice/dashboard.php?student_id=$id';
+const String firstTabUrl =
+    'https://app.eelonterritory.co.in/webservice/profile.php';
 
 //keep local content of pages of setting screen
-const String callLogsUrl = 'https://app.eelonterritory.co.in/webservice/subjects.php?type=iLearn';
+const String callLogsUrl =
+    'https://app.eelonterritory.co.in/webservice/subjects.php?type=iLearn';
 const String webSiteUrl = '';
 const String termsPageURL = '';
 
