@@ -48,7 +48,7 @@
         android:name="${applicationName}"
         android.usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher_round"
-        android:label="Eelon Student"
+        android:label="Eelon 360"
         android:requestLegacyExternalStorage="true">     <!-- this tag added to display downloading notification -->
 
 
