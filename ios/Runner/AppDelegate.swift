@@ -31,12 +31,12 @@ import AppTrackingTransparency
         // [END register_for_notifications]
         
         //OneSignal Notification Badges Verify
-        if let userDefaults = UserDefaults(suiteName: "group.limitless.eelon.webviewprime.onesignal") {
+        if let userDefaults = UserDefaults(suiteName: "group.chandrans.yuva.webviewprime.onesignal") {
             userDefaults.set("test 1" as AnyObject, forKey: "key1")
             userDefaults.set("test 2" as AnyObject, forKey: "key2")
             userDefaults.synchronize()
         }
-        if let userDefaults = UserDefaults(suiteName: "group.limitless.eelon.webviewprime.onesignal") {
+        if let userDefaults = UserDefaults(suiteName: "group.chandrans.yuva.webviewprime.onesignal") {
             let value1 = userDefaults.string(forKey: "key1")
             let value2 = userDefaults.string(forKey: "key2")
             print("value1 = ", value1?.description ?? "No value")

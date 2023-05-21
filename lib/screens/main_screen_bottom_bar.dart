@@ -5,9 +5,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:lottie/lottie.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
-import 'package:limitless.eelon/helpers/Constant.dart';
-import 'package:limitless.eelon/screens/web_url_screen.dart';
-import 'package:limitless.eelon/screens/webview_screen.dart';
+import 'package:chandrans.yuva/helpers/Constant.dart';
+import 'package:chandrans.yuva/screens/web_url_screen.dart';
+import 'package:chandrans.yuva/screens/webview_screen.dart';
 import 'package:provider/src/provider.dart';
 
 import '../helpers/Strings.dart';

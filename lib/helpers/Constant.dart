@@ -3,7 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 const appName = 'Eelon';
 
 const String appbartitle = 'Eelon';
-const String andoidPackageName = 'limitless.eelon';
+const String andoidPackageName = 'chandrans.yuva';
 String? id = "";
 
 getId() async {

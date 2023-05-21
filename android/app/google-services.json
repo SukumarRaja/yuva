@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "303324976496",
-    "project_id": "campus-360-27aa6",
-    "storage_bucket": "campus-360-27aa6.appspot.com"
+    "project_number": "998506293853",
+    "project_id": "yuva-9893c",
+    "storage_bucket": "yuva-9893c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:303324976496:android:6ab9eaa82d072edf36ebb5",
+        "mobilesdk_app_id": "1:998506293853:android:d60e522a74b9a15cfebbb4",
         "android_client_info": {
-          "package_name": "limitless.eelon"
+          "package_name": "chandrans.yuva"
         }
       },
       "oauth_client": [
         {
-          "client_id": "303324976496-ouhfvgha3o9h5ut01fdnp28dpn77m0mc.apps.googleusercontent.com",
+          "client_id": "998506293853-t4mso2f1q4vjo2atiggptj4gbodfm05f.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDb493UbUwKwFZkM7klSfvofSMr0ZY3T-s"
+          "current_key": "AIzaSyCrtjD93Pf8WS3WYONM19OPupBo3OEa5YM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "303324976496-ouhfvgha3o9h5ut01fdnp28dpn77m0mc.apps.googleusercontent.com",
+              "client_id": "998506293853-t4mso2f1q4vjo2atiggptj4gbodfm05f.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:limitless.eelon/app/controller/fcm.dart';
-import 'package:limitless.eelon/app/ui/screens/login.dart';
+import 'package:chandrans.yuva/app/controller/fcm.dart';
+import 'package:chandrans.yuva/app/ui/screens/login.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -37,7 +37,8 @@ class AuthController extends GetxController {
     preferences.setString("on_boarding", "onBoarding");
     var onBoard = preferences.getString('on_boarding');
     debugPrint("on boarding data $onBoard");
-    await Get.off(() => const Login());
+    // await Get.off(() => const Login());
+    await Get.off(() => MainScreen());
     return onBoard;
   }
 

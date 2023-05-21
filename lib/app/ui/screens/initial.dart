@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../main.dart';
+import '../../../screens/choose.dart';
 import '../../../screens/main_screen_bottom_bar.dart';
 import '../../controller/auth.dart';
 import 'login.dart';
@@ -45,11 +46,8 @@ class _InitialState extends State<Initial> {
               });
             }
           },
-          builder: (controller) => isLogin == "onBoarding"
-              ? const OnBoarding()
-              : isLogin == "isLogin"
-                  ?  MainScreen()
-                  : const Login()),
+          builder: (controller) =>
+              isLogin == "onBoarding" ? const OnBoarding() : ChooseScreen()),
     );
   }
 }
