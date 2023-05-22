@@ -55,10 +55,16 @@ class ChooseScreen extends StatelessWidget {
               width: Get.width,
               margin: const EdgeInsets.all(10.0),
               decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                      colors: [AppColors.black, AppColors.buttonGradient]),
+                  boxShadow: [
+                    BoxShadow(
+                        color: AppColors.grey.withOpacity(.4),
+                        blurRadius: 1,
+                        spreadRadius: 1)
+                  ],
+                  // gradient: const LinearGradient(
+                  //     colors: [AppColors.white, AppColors.buttonGradient]),
                   borderRadius: BorderRadius.circular(10.0),
-                  color: AppColors.primary),
+                  color: AppColors.white),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -69,7 +75,8 @@ class ChooseScreen extends StatelessWidget {
                   ),
                   const Text(
                     "Annasthalam",
-                    style: TextStyle(fontSize: 20, color: Colors.white),
+                    style: TextStyle(
+                        fontSize: 20, color: AppColors.buttonGradient),
                   ),
                 ],
               ),
