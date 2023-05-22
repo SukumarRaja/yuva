@@ -12,4 +12,12 @@ class MainController extends GetxController {
   set pageIndex(value) {
     _pageIndex.value = value;
   }
+
+  final _isAnnasThalam = false.obs;
+
+  get isAnnasThalam => _isAnnasThalam.value;
+
+  set isAnnasThalam(value) {
+    _isAnnasThalam.value = value;
+  }
 }

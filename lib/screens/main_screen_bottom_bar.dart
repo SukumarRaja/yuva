@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:chandrans.yuva/app/controller/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -19,6 +20,7 @@ import '../screens/settings_screen.dart';
 
 class MainScreen extends StatefulWidget {
   MainScreen();
+
   @override
   State<MainScreen> createState() => _MainScreenState();
 }
@@ -82,11 +84,19 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
           'NOTIFICATION OPENED HANDLER CALLED WITH: ${result.notification.launchUrl}');
       if (result.notification.launchUrl != null) {
         setState(() {
-          webinitialUrl = result.notification.launchUrl.toString();
-          Navigator.of(context).pushAndRemoveUntil(
-            MaterialPageRoute(builder: (_) => MainScreen()),
-            (route) => false,
-          );
+          if (MainController.to.isAnnasThalam == true) {
+            annasthalamUrl = result.notification.launchUrl.toString();
+            Navigator.of(context).pushAndRemoveUntil(
+              MaterialPageRoute(builder: (_) => MainScreen()),
+              (route) => false,
+            );
+          } else {
+            webinitialUrl = result.notification.launchUrl.toString();
+            Navigator.of(context).pushAndRemoveUntil(
+              MaterialPageRoute(builder: (_) => MainScreen()),
+              (route) => false,
+            );
+          }
         });
       }
     });
@@ -310,7 +320,13 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
     Navigator(
       key: _navigatorKeys[0],
       onGenerateRoute: (routeSettings) {
-        return MaterialPageRoute(builder: (_) => WebUrlScreen(firstTabUrl));
+        if (MainController.to.isAnnasThalam == true) {
+          print("annsthalam");
+          return MaterialPageRoute(builder: (_) => WebUrlScreen(annasFirstTabUrl));
+        } else {
+          print("chandra yuva");
+          return MaterialPageRoute(builder: (_) => WebUrlScreen(firstTabUrl));
+        }
       },
     ),
 
@@ -318,7 +334,10 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
     Navigator(
       key: _navigatorKeys[1],
       onGenerateRoute: (routeSettings) {
-        return MaterialPageRoute(builder: (_) => WebUrlScreen(webinitialUrl));
+        return MaterialPageRoute(
+            builder: (_) => WebUrlScreen(MainController.to.isAnnasThalam == true
+                ? annasthalamUrl
+                : webinitialUrl));
       },
     ),
 

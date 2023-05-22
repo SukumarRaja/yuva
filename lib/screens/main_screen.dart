@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:chandrans.yuva/app/controller/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/src/provider.dart';
@@ -11,6 +12,7 @@ import '../screens/home_screen.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
+
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
@@ -48,11 +50,19 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
           'NOTIFICATION OPENED HANDLER CALLED WITH: ${result.notification.launchUrl}');
       if (result.notification.launchUrl != null) {
         setState(() {
-          webinitialUrl = result.notification.launchUrl.toString();
-          Navigator.of(context).pushAndRemoveUntil(
-            MaterialPageRoute(builder: (_) => MyHomePage()),
-            (route) => false,
-          );
+          if (MainController.to.isAnnasThalam == true) {
+            annasthalamUrl = result.notification.launchUrl.toString();
+            Navigator.of(context).pushAndRemoveUntil(
+              MaterialPageRoute(builder: (_) => MyHomePage()),
+              (route) => false,
+            );
+          } else {
+            webinitialUrl = result.notification.launchUrl.toString();
+            Navigator.of(context).pushAndRemoveUntil(
+              MaterialPageRoute(builder: (_) => MyHomePage()),
+              (route) => false,
+            );
+          }
         });
       }
     });

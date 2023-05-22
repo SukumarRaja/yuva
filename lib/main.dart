@@ -140,7 +140,6 @@ class _MyAppState extends State<MyApp> {
       ],
       child: Consumer<ThemeProvider>(builder: (context, value, child) {
         return GetMaterialApp(
-          title: appName,
           debugShowCheckedModeBanner: false,
           themeMode: value.getTheme(),
           theme: AppThemes.lightTheme,

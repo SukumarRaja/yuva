@@ -1,8 +1,8 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-const appName = 'Eelon';
+const appName = 'Chandran Yuva';
 
-const String appbartitle = 'Eelon';
+const String appbartitle = 'Chandran Yuva';
 const String andoidPackageName = 'chandrans.yuva';
 String? id = "";
 
@@ -14,14 +14,14 @@ getId() async {
 
 //change this url to set your URL in app
 // String webinitialUrl = 'https://www.codecanyon.net';
-String webinitialUrl =
-    'https://app.eelonterritory.co.in/webservice/dashboard.php?student_id=$id';
-const String firstTabUrl =
-    'https://app.eelonterritory.co.in/webservice/profile.php';
+String webinitialUrl = 'https://app.workstation360.org/admin/';
+String annasthalamUrl = 'https://www.chandransyuva.com/';
+const String firstTabUrl = 'https://app.workstation360.org/admin/clients';
+const String annasFirstTabUrl = 'https://www.chandransyuva.com/contact-us/';
 
 //keep local content of pages of setting screen
 const String callLogsUrl =
-    'https://app.eelonterritory.co.in/webservice/subjects.php?type=iLearn';
+    '';
 const String webSiteUrl = '';
 const String termsPageURL = '';
 

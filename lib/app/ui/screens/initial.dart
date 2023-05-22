@@ -46,8 +46,7 @@ class _InitialState extends State<Initial> {
               });
             }
           },
-          builder: (controller) =>
-              isLogin == "onBoarding" ? const OnBoarding() : ChooseScreen()),
+          builder: (controller) => const ChooseScreen()),
     );
   }
 }
